@@ -13,7 +13,7 @@ body {
 .pagination a {
     color: black;
     float: left;
-    padding: 8px 16 px;
+    padding: 8px 16px;
     text-decoration: none;
 }
 
@@ -129,7 +129,7 @@ body {
     margin-top: 6px;
     margin-bottom: 6px;
     margin-left: 6px;
-    border: 3px solid #C4C4C4;
+    border: 2px solid #C4C4C4;
     padding: 4px;
     width: 97.9%;
 }
@@ -138,7 +138,7 @@ body {
     float: left;
     width: 96.8%;
     min-height: 454px;
-    background-image:
+    /* background-image: */
     border: 2px solid #C4C4C4;
     padding: 10px;
     margin-bottom: 6px;
@@ -146,7 +146,7 @@ body {
 
 #beranda-judul {
     text-align: center;
-    background-color:
+    /* background-color: */
 }
 
 #beranda-konten {
@@ -215,6 +215,10 @@ body {
     font-weight: bold;
 }
 
+.tombol-opsi-container {
+    float: left;
+}
+
 .tombol-opsi-container a:hover {
     background-color: #C4C4C4;
 }
@@ -256,3 +260,4 @@ body {
 .warna-formulir-disabled {
     background-color: #F1F1F1;
 }
+/* Akhir pages */

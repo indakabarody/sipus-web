@@ -60,33 +60,31 @@
             while ($r_tampil_anggota = mysqli_fetch_array($q_tampil_anggota)) {
                 if (empty($r_tampil_anggota['foto']) or ($r_tampil_anggota['foto'] == '-')) {
                     $foto = "admin-no-photo.jpg";
-                } else {
-                    $foto = $r_tampil_anggota['foto'];
-                    ?>
+                } else $foto = $r_tampil_anggota['foto'];
+                ?>
                     
-                    <tr>
-                        <td><?php echo $nomor; ?></td>
-                        <td><?php echo $r_tampil_anggota['idanggota']; ?></td>
-                        <td><?php echo $r_tampil_anggota['nama']; ?></td>
-                        <td><img src="images/<?php echo $foto; ?>" width="70px" height="70px"></td>
-                        <td><?php echo $r_tampil_anggota['jeniskelamin']; ?></td>
-                        <td><?php echo $r_tampil_anggota['alamat']; ?></td>
-                        <td>
-                            <div class="tombol-opsi-container">
-                                <a target="_blank" href="pages/cetak_kartu.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" class="tombol">Cetak Kartu</a>
-                            </div>
-                            <div class="tombol-opsi-container">
-                                <a href="index.php?p=anggota-edit&id=<?php echo $r_tampil_anggota['idanggota']; ?>" class="tombol">Edit</a>
-                            </div>
-                            <div class="tombol-opsi-container">
-                                <a href="proses/anggota-hapus.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" onclick="return_confirmation('Apakah Anda Yakin Akan Menghapus Data Ini?')" class="tombol">Hapus</a>
-                            </div>
-                        </td>
-                    </tr>
+                <tr>
+                    <td><?php echo $nomor; ?></td>
+                    <td><?php echo $r_tampil_anggota['idanggota']; ?></td>
+                    <td><?php echo $r_tampil_anggota['nama']; ?></td>
+                    <td><img src="images/<?php echo $foto; ?>" width="70px" height="70px"></td>
+                    <td><?php echo $r_tampil_anggota['jeniskelamin']; ?></td>
+                    <td><?php echo $r_tampil_anggota['alamat']; ?></td>
+                    <td>
+                        <div class="tombol-opsi-container">
+                            <a target="_blank" href="pages/cetak_kartu.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" class="tombol">Cetak Kartu</a>
+                        </div>
+                        <div class="tombol-opsi-container">
+                            <a href="index.php?p=anggota-edit&id=<?php echo $r_tampil_anggota['idanggota']; ?>" class="tombol">Edit</a>
+                        </div>
+                        <div class="tombol-opsi-container">
+                            <a href="proses/anggota-hapus.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" onclick="return_confirmation('Apakah Anda Yakin Akan Menghapus Data Ini?')" class="tombol">Hapus</a>
+                        </div>
+                    </td>
+                </tr>
 
-                    <?php
-                    $nomor++;
-                }
+                <?php
+                $nomor++;
             }
         } else {
             echo "<tr><td colspan='6'>Data Tidak Ditemukan</td></tr>";
