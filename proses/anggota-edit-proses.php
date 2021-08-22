@@ -5,7 +5,7 @@ $id_anggota = $_POST['id_anggota'];
 $nama = $_POST['nama'];
 $jenis_kelamin = $_POST['jenis_kelamin'];
 $alamat = $_POST['alamat'];
-$status = "Tidak Meminjam";
+$foto_awal = $_POST['foto_awal'];
 
 if (isset($_POST['simpan'])) {
     extract($_POST);
@@ -18,13 +18,16 @@ if (isset($_POST['simpan'])) {
 
         // Tentukan folder untuk menyimpan file
         $folder = "../images/$file_foto";
+        @unlink("$folder");
         // Apabila file berhasil di upload
         move_uploaded_file($lokasi_file, "$folder");
-    } else $file_foto = "-";
+    } else $file_foto = $foto_awal;
 
-    $sql = "INSERT INTO tbanggota 
-            VALUES ('$id_anggota', '$nama', '$jenis_kelamin', '$alamat', '$status', '$file_foto')";
-    $query = mysqli_query($db, $sql);
+    mysqli_query($db, 
+        "UPDATE tbanggota 
+        SET nama='$nama', jeniskelamin='$jenis_kelamin', alamat='$alamat', foto = '$file_foto'
+        WHERE idanggota = '$id_anggota'"
+    );
 
     header("location:../index.php?p=anggota");
 }

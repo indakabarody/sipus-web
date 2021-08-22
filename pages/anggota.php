@@ -78,7 +78,7 @@
                             <a href="index.php?p=anggota-edit&id=<?php echo $r_tampil_anggota['idanggota']; ?>" class="tombol">Edit</a>
                         </div>
                         <div class="tombol-opsi-container">
-                            <a href="proses/anggota-hapus.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" onclick="return_confirmation('Apakah Anda Yakin Akan Menghapus Data Ini?')" class="tombol">Hapus</a>
+                            <a href="proses/anggota-hapus.php?id=<?php echo $r_tampil_anggota['idanggota']; ?>" onclick="return confirm('Apakah Anda Yakin Akan Menghapus Data Ini?')" class="tombol">Hapus</a>
                         </div>
                     </td>
                 </tr>
