@@ -13,7 +13,6 @@ if (! empty($r_tampil_anggota['foto']) && ($r_tampil_anggota['foto']) != '-') {
 
 // Hapus data anggota dari database
 mysqli_query($db, "DELETE FROM tbanggota WHERE idanggota = '$id_anggota'");
-
 header("location:../index.php?p=anggota");
 
 ?>

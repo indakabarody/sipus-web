@@ -23,11 +23,11 @@ if (empty($r_tampil_anggota['foto']) or ($r_tampil_anggota['foto']) == '-') {
             </tr>
             <tr>
                 <td class="label-formulir">ID Anggota</td>
-                <td class="isian-formulir"><input type="text" name="id_anggota" value="<?php echo $r_tampil_anggota['idanggota']; ?>" readonly="readonly" class="isian-formulir isian-formulir-border warna-formulir-disabled"></td>
+                <td class="isian-formulir"><input type="text" name="id_anggota" value="<?php echo $r_tampil_anggota['idanggota']; ?>" readonly="readonly" class="isian-formulir isian-formulir-border warna-formulir-disabled" required></td>
             </tr>
             <tr>
                 <td class="label-formulir">Nama</td>
-                <td class="isian-formulir"><input type="text" name="nama" value="<?php echo $r_tampil_anggota['nama']; ?>" class="isian-formulir isian-formulir-border"></td>
+                <td class="isian-formulir"><input type="text" name="nama" value="<?php echo $r_tampil_anggota['nama']; ?>" class="isian-formulir isian-formulir-border" required></td>
             </tr>
             <tr>
                 <td class="label-formulir">Jenis Kelamin</td>
@@ -40,7 +40,7 @@ if (empty($r_tampil_anggota['foto']) or ($r_tampil_anggota['foto']) == '-') {
             <tr>
                 <td class="label-formulir">Alamat</td>
                 <td class="isian-formulir">
-                    <textarea rows="2" cols="40" name="alamat" class="isian-formulir isian-formulir-border"><?php echo $r_tampil_anggota['alamat']; ?></textarea>
+                    <textarea rows="2" cols="40" name="alamat" class="isian-formulir isian-formulir-border" required><?php echo $r_tampil_anggota['alamat']; ?></textarea>
                 </td>
             </tr>
             <tr>

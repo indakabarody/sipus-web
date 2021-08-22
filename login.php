@@ -1,3 +1,8 @@
+<?php
+session_start();
+if (isset($_SESSION['sesi'])) header('location:index.php?p=beranda');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>

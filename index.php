@@ -46,7 +46,8 @@ if(isset($_SESSION['sesi'])){
 		<div id="content-container">
 			    <div class="container">
 		<div class="row"><br/><br/><br/>
-			<div class="col-md-10 col-md-offset-1" style="background-image:url('../asanoer-background.jpg')">
+			<!-- <div class="col-md-10 col-md-offset-1" style="background-image:url('../asanoer-background.jpg')"> -->
+			<div class="col-md-10 col-md-offset-1">
 				<div class="col-md-4 col-md-offset-4">
 					<div class="panel panel-warning login-panel" style="background-color:rgba(255, 255, 255, 0.6);position:relative;">
 						
